@@ -101,11 +101,20 @@ iaStrategique3(Board, Move, Player) :-
       win(Opp, B) -> true
     ;
       findall(Score-Col,
-              (member(Col, FreeCols),
-               simulateMove(Board, Col, Player, B),
-               scoreBoard(B, Player, Score)),
-              Scores),
-      bestScoreMove(Scores, Move)
+    (
+        member(Col, FreeCols),
+        simulateMove(Board, Col, Player, B1),
+        changePlayer(Player, Opp),
+        getFreeColumns(B1, OppCols),
+        findall(S2,
+            (member(OC, OppCols),
+             simulateMove(B1, OC, Opp, B2),
+             scoreBoard(B2, Player, S2)),
+            OppScores),
+        (OppScores == [] -> Score = 0; min_list(OppScores, Score))
+    ),
+    Scores),
+    bestScoreMove(Scores, Move)
     ).
 
 % --- Fonction finale qui joue un coup ---
