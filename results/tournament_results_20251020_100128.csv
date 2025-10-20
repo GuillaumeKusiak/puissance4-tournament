@@ -1,0 +1,13 @@
+ia1,ia2,winner,moves
+ia_kusiak.pl,ia_manchot.pl,ia_kusiak.pl,19
+ia_kusiak.pl,ia_random.pl,ia_kusiak.pl,7
+ia_kusiak.pl,ia_reydet.pl,ia_kusiak.pl,19
+ia_manchot.pl,ia_kusiak.pl,ia_manchot.pl,19
+ia_manchot.pl,ia_random.pl,ia_random.pl,16
+ia_manchot.pl,ia_reydet.pl,ia_manchot.pl,19
+ia_random.pl,ia_kusiak.pl,ia_random.pl,13
+ia_random.pl,ia_manchot.pl,ia_random.pl,13
+ia_random.pl,ia_reydet.pl,ia_reydet.pl,8
+ia_reydet.pl,ia_kusiak.pl,ia_reydet.pl,19
+ia_reydet.pl,ia_manchot.pl,ia_reydet.pl,19
+ia_reydet.pl,ia_random.pl,ia_reydet.pl,7
