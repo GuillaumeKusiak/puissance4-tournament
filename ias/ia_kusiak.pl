@@ -112,4 +112,3 @@ iaStrategique3(Board, Move, Player) :-
 joue_coup(Board, Joueur, Col) :-
     iaStrategique3(Board, Col, Joueur),
     format('~w~n', [Col]).
-
